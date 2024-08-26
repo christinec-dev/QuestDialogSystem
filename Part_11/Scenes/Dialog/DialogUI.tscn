@@ -1,0 +1,82 @@
+[gd_scene load_steps=3 format=3 uid="uid://7fh470u80sde"]
+
+[ext_resource type="Script" path="res://Scripts/Dialog/DialogUI.gd" id="1_l4s8s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fql4q"]
+bg_color = Color(0.141176, 0.431373, 0.74902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.686275, 0.807843, 0.956863, 1)
+
+[node name="DialogUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l4s8s")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -283.0
+offset_right = -10.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_fql4q")
+
+[node name="DialogBox" type="VBoxContainer" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="DialogSpeaker" type="Label" parent="CanvasLayer/Panel/DialogBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.686275, 0.807843, 0.956863, 1)
+theme_override_font_sizes/font_size = 20
+text = "Speaker"
+
+[node name="DialogText" type="Label" parent="CanvasLayer/Panel/DialogBox"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 23
+text = "Dialog"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DialogOptions" type="HBoxContainer" parent="CanvasLayer/Panel/DialogBox"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -38.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = 38.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 20
+text = "x"
+
+[connection signal="pressed" from="CanvasLayer/Panel/CloseButton" to="." method="_on_close_button_pressed"]

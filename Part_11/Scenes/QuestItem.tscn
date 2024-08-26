@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0uh5oecmbusv"]
+
+[ext_resource type="Script" path="res://Scripts/QuestItem.gd" id="1_ae7yj"]
+[ext_resource type="Texture2D" uid="uid://bc82p4b4w37m0" path="res://Assets/Icons/icon5.png" id="2_roi4b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vs80s"]
+
+[node name="QuestItem" type="StaticBody2D" groups=["Item"]]
+script = ExtResource("1_ae7yj")
+item_id = "item_potion"
+item_icon = ExtResource("2_roi4b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vs80s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_roi4b")
