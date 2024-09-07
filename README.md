@@ -2,7 +2,7 @@
 This is the official GitHub repository for the Godot 4 Quest & Dialog system, featured on my YouTube channel. This system incorporates dynamic dialog trees, quests, objectives, rewards, and NPC/Quest Item interactions. 😊
 
 ## Resources
-- [YouTube Series](https://www.youtube.com/@christinec_devs)
+- [YouTube Series](https://www.youtube.com/playlist?list=PL8VGDn5bxwDYrH2Nt4bEgu-txYm8MTKjD)
 - [Excalidraw Board](https://excalidraw.com/#json=2qrwDJKS9R7i-0QqdE9cA,Vhm1ncjb6xFmd05KqrgU1Q)
 - [Base Template](https://ko-fi.com/s/ab188420b7)
 
